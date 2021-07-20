@@ -1,12 +1,16 @@
 package Animals;
 
+import java.util.Objects;
+
 public class Dog extends Carnivorous {
-	String dogName = "Собака";
+	public Dog(int hunger, int weight, String nameAnimal) {
+		super(hunger, weight, nameAnimal);
+	}
 
 	@Override
 	public String voice() {
 		String voiceDog = "- Гав-Гав-Гав";
-		System.out.println(dogName+" "+voiceDog);
+		System.out.println(voiceDog);
 		return voiceDog;
 	}
 
