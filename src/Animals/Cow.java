@@ -1,6 +1,5 @@
 package Animals;
 
-import java.util.Objects;
 
 public class Cow extends Herbivore {
 	public Cow(int hunger, int weight, String nameAnimal) {
@@ -8,9 +7,19 @@ public class Cow extends Herbivore {
 	}
 
 	@Override
+	public AviarySize getSize() {
+		return AviarySize.AVIARY_SIZE_30;
+	}
+
+	@Override
+	public String getClassName() {
+		return "Корова ";
+	}
+
+	@Override
 	public String voice() {
 		String voiceCow = "- Не реагирует";
-		System.out.println(voiceCow);
+		System.out.println(getClass()+" "+getNameAnimal()+" "+voiceCow);
 		return voiceCow;
 	}
 

@@ -1,6 +1,6 @@
 package Animals;
 
-import java.util.Objects;
+
 
 public class Dog extends Carnivorous {
 	public Dog(int hunger, int weight, String nameAnimal) {
@@ -8,9 +8,19 @@ public class Dog extends Carnivorous {
 	}
 
 	@Override
+	public AviarySize getSize() {
+		return AviarySize.AVIARY_SIZE_20;
+	}
+
+	@Override
+	public String getClassName() {
+		return "Собака ";
+	}
+
+	@Override
 	public String voice() {
 		String voiceDog = "- Гав-Гав-Гав";
-		System.out.println(voiceDog);
+		System.out.println(getClass()+" "+getNameAnimal()+" "+voiceDog);
 		return voiceDog;
 	}
 

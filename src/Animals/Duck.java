@@ -2,7 +2,7 @@ package Animals;
 
 import Interface.Swim;
 
-import java.util.Objects;
+
 
 public class Duck extends Herbivore implements Swim {
 	public Duck(int hunger, int weight, String nameAnimal) {
@@ -10,15 +10,25 @@ public class Duck extends Herbivore implements Swim {
 	}
 
 	@Override
+	public AviarySize getSize() {
+		return AviarySize.AVIARY_SIZE_10;
+	}
+
+	@Override
 	public String voice() {
 		String voiceDuck = "- Утка смотрит на тебя как на дурака и крякает";
-		System.out.println(voiceDuck);
+		System.out.println(getClass()+" "+getNameAnimal()+" "+voiceDuck);
 		return voiceDuck;
 	}
 
 	@Override
+	public String getClassName() {
+		return "Утка ";
+	}
+
+	@Override
 	public void swim() {
-		System.out.println("Я утка я плаваю");
+		System.out.println(getClass()+" "+getNameAnimal()+" "+" я плаваю");
 
 	}
 }

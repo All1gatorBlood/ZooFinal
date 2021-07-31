@@ -2,7 +2,6 @@ package Animals;
 
 import Interface.Swim;
 
-import java.util.Objects;
 
 public class Fish extends Carnivorous implements Swim {
 	public Fish(int hunger, int weight, String nameAnimal) {
@@ -10,17 +9,28 @@ public class Fish extends Carnivorous implements Swim {
 	}
 
 	@Override
+	public AviarySize getSize() {
+		return AviarySize.AVIARY_SIZE_10;
+	}
+
+	@Override
 	public String voice() {
 		String voiceFish = "- Дружище, ты идиот? рыбы не разговаривают";
-		System.out.println(voiceFish);
+		System.out.println(getClass()+" "+getNameAnimal()+" "+voiceFish);
 		return voiceFish;
 		
 	}
 
 	@Override
+	public String getClassName() {
+		return "Рыба ";
+	}
+
+	@Override
 	public void swim() {
-		System.out.println("Я рыба я плаваю");
+		System.out.println(getClass()+" "+getNameAnimal()+" "+ "я плаваю");
 		
 	}
+
 
 }

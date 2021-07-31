@@ -10,6 +10,7 @@ public class Worker {
 	}
 	public void feed(Animals animals,Food food) {
 		animals.eat(food);
+
 	}
 
 }

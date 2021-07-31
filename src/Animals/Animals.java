@@ -5,8 +5,8 @@ import Food.Food;
 import Interface.Voice;
 
 public abstract class Animals implements Voice {
-	int hunger, weight;
-	String nameAnimal;
+	private int hunger, weight;
+	private String nameAnimal;
 
 	public Animals(int hunger, int weight, String nameAnimal) {
 		this.hunger = hunger;
@@ -18,18 +18,18 @@ public abstract class Animals implements Voice {
 		return hunger;
 	}
 
-	public int getWeight() {
-		return weight;
+	public void setHunger(int hunger) {
+		this.hunger = hunger;
 	}
+
 
 	public String getNameAnimal() {
 		return nameAnimal;
 	}
+	public abstract AviarySize getSize();
+	public abstract void eat(Food food);
+	public abstract String getClassName();
 
-	public void eat(Food food) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public boolean equals(Object obj) {
