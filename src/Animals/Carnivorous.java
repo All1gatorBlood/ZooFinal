@@ -16,7 +16,7 @@ public abstract class Carnivorous extends Animals {
 	}else {
 		System.out.println("Я такое не ем");
 	}
-	String link;
+
 	
 }
 

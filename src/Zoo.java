@@ -16,20 +16,38 @@ public abstract class Zoo implements Swim {
         Meat meat = new Meat();
         Grass grass = new Grass();
         Worker worker = new Worker();
-        Horse horse = new Horse(20,50,"Лошадь1");
-        Bear bear = new Bear(10,60,"Медведь1");
-        Cow cow = new Cow(5,40,"Корова1");
-        Dog dog = new Dog(100,30,"Собака1");
-        Duck duck = new Duck(10,20,"Утка1");
+        Horse horse = new Horse(20,50,"Цезарь");
+        Bear bear = new Bear(10,60,"Балу");
+        Cow cow = new Cow(5,40,"Мун");
+        Dog dog = new Dog(100,30,"Евгений");
+        Duck duck = new Duck(10,20,"Савелий");
         Fish fish = new Fish(10,20,"Аркадий");
+
+        //Обявление вальера (хищьник, травоядный)
         Aviary<Carnivorous> aviaryCarnivorous = new Aviary<Carnivorous>();
         Aviary<Herbivore> aviaryHerbivore = new Aviary<Herbivore>();
+
+        //массив Swim
         swimArr.add(duck);
         swimArr.add(fish);
+
+        //Заполнение хешмапы
         aviaryCarnivorous.addAnimal(dog);
         aviaryCarnivorous.addAnimal(bear);
         aviaryCarnivorous.addAnimal(fish);
+        aviaryHerbivore.addAnimal(duck);
+        aviaryHerbivore.addAnimal(cow);
+        aviaryHerbivore.addAnimal(horse);
+
+        //получение ссылки (откликнуться на кличку)
         aviaryCarnivorous.getLinkAnimal(dog.getNameAnimal());
+        System.out.println(System.lineSeparator());
+        aviaryCarnivorous.getLinkAnimal(fish.getNameAnimal());
+        System.out.println(System.lineSeparator());
+        aviaryCarnivorous.getLinkAnimal(bear.getNameAnimal());
+        System.out.println(System.lineSeparator());
+        aviaryHerbivore.getLinkAnimal(duck.getNameAnimal());
+
 
         //getVoice
         worker.getVoice(dog);
