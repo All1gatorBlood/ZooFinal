@@ -12,15 +12,18 @@ public abstract class Carnivorous extends Animals {
 
 	@Override
 	public void eat(Food food) {
-	if (food instanceof Meat) {
-		System.out.println(getClassName()+getNameAnimal()+" ¬кусное м€со");
-		setHunger(getHunger()+food.getHang());
-	}else {
-		System.out.println(getClassName()+getNameAnimal()+"я такое не ем");
+
+		if (food instanceof Grass) {
+			System.out.println(getClassName() + getNameAnimal() + " ¬кусное м€со");
+			setHunger(getHunger() + food.getHang());
+		} else {
+			try {
+				throw new WrongFoodException();
+			} catch (WrongFoodException e) {
+				System.err.println(getClassName() + getNameAnimal() + " нюхает траву, € такое не ем");
+			}
+
+		}
+
 	}
-
-	
-}
-
-
 }

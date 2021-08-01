@@ -9,7 +9,7 @@ import java.util.*;
 
 public abstract class Zoo implements Swim {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongFoodException {
         // Объекты и переменные
         List<Swim> swimArr = new ArrayList<>();
         Meat steak= new Meat(5,"стейк");
@@ -46,8 +46,6 @@ public abstract class Zoo implements Swim {
         aviaryHerbivore.addAnimal(duck);
 
 
-
-
         //getVoice
         System.out.println(System.lineSeparator());
         System.out.println("---------Рабочий подзывает животных-----------");
@@ -62,11 +60,12 @@ public abstract class Zoo implements Swim {
         System.out.println(System.lineSeparator());
 
         //feed
+        worker.feed(fish, steak);
+        worker.feed(fish, weed);
+        worker.feed(bear, weed);
+        worker.feed(bear, steak);
+        worker.feed(horse, weed);
 
-       // worker.feed(fish, meat);
-     //   worker.feed(fish, grass);
-     //   worker.feed(bear, grass);
-     //   worker.feed(bear, meat);
         for (Swim swim : swimArr) {
             swim.swim();
 
@@ -83,8 +82,6 @@ public abstract class Zoo implements Swim {
         System.out.println("---------------------------");
         aviaryHerbivore.getLinkAnimal(duck.getNameAnimal());
         horse.run();
-
-
 
     }
 

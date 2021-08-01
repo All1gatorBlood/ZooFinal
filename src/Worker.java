@@ -9,8 +9,13 @@ public class Worker {
 		animals.voice();
 	}
 	public void feed(Animals animals,Food food) {
-		animals.eat(food);
+
+				animals.eat(food);
+
+
 
 	}
 
 }
+
+

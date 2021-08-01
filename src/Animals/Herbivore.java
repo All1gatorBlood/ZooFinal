@@ -12,12 +12,18 @@ public abstract class Herbivore extends Animals {
 
 	@Override
 	public void eat(Food food) {
-	if (food instanceof Grass) {
-		System.out.println(getClassName()+getNameAnimal()+" ¬кусна€ трава");
-		setHunger(getHunger()+ food.getHang());
-	}else {
-		System.out.println(getClassName()+getNameAnimal()+" я такое не ем");
+
+		if (food instanceof Grass) {
+			System.out.println(getClassName() + getNameAnimal() + " ¬кусна€ трава");
+			setHunger(getHunger() + food.getHang());
+		} else {
+			try {
+				throw new WrongFoodException();
+			} catch (WrongFoodException e) {
+				System.err.println(getClassName() + getNameAnimal() + " нюхает м€со, € такое не ем");
+			}
+
+		}
 	}
-	
 }
-}
+

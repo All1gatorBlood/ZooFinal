@@ -27,7 +27,9 @@ public abstract class Animals implements Voice {
 		return nameAnimal;
 	}
 	public abstract AviarySize getSize();
-	public abstract void eat(Food food);
+	public  void eat(Food food){
+
+	}
 	public abstract String getClassName();
 
 
@@ -40,4 +42,5 @@ public abstract class Animals implements Voice {
 	public int hashCode() {
 		return super.hashCode();
 	}
+
 }

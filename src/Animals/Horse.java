@@ -29,9 +29,9 @@ public class Horse extends Herbivore implements Run {
 
 	@Override
 	public void run() {
-		System.out.println(getClassName()+getNameAnimal()+" мчу голопом");
+		System.out.println(getClassName()+getNameAnimal()+" бежит");
 		setHunger(getHunger()-10);
-		System.out.println(getHunger());
+		System.out.println("—ытость уменьшилась на 10"+System.lineSeparator() + "—ытость: "+getHunger());
 	}
 
 }
