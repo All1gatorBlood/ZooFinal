@@ -12,8 +12,6 @@ public class Worker {
 
 				animals.eat(food);
 
-
-
 	}
 
 }
