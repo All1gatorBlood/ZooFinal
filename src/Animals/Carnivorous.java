@@ -16,7 +16,9 @@ public abstract class Carnivorous extends Animals {
 		if (food instanceof Grass) {
 			System.out.println(getClassName() + getNameAnimal() + " ¬кусное м€со");
 			setHunger(getHunger() + food.getHang());
+
 		} else {
+
 			try {
 				throw new WrongFoodException();
 			} catch (WrongFoodException e) {
@@ -24,6 +26,5 @@ public abstract class Carnivorous extends Animals {
 			}
 
 		}
-
 	}
 }
